@@ -258,14 +258,16 @@ a:focus {
 
 .content-section {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .download-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background: url(../img/101-dark-small.jpg) no-repeat center 30% scroll;
-    background-color: #000;
+    color: #000;
+    /*background: url(../img/101-dark-small.jpg) no-repeat center 30% scroll;
+    */
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -295,7 +297,8 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 210px;
+        /*padding-top: 210px;
+        */
     }
 
     .download-section {
@@ -383,4 +386,12 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.about-section2 {
+    background-color: #fff;
+}
+
+.feature-section {
+    padding: 50px 25px 50px 25px;
 }
