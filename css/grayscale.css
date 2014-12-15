@@ -258,7 +258,8 @@ a:focus {
 
 .content-section {
     padding-top: 100px;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;
+    */
 }
 
 .download-section {
@@ -392,6 +393,14 @@ body {
     background-color: #fff;
 }
 
+.about-section {
+    padding-bottom: 100px;
+}
+
 .feature-section {
     padding: 50px 25px 50px 25px;
+}
+
+.feature-img {
+    padding-bottom: 35px;
 }

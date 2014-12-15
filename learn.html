@@ -9,13 +9,13 @@
     <meta name="author" content="Dencs web team">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Dencs</title>
+    <title>Dencs | Learn</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/grayscale-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,19 +30,20 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+    <script src="js/Learn.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="learnApp">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top navbar-index" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="index.html">
                     Dencs
                 </a>
             </div>
@@ -67,83 +68,66 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Dencs</h1>
-                        <p class="intro-text">Dencs is an open and distributed payment infrastructure for enterprise</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center about-section">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Dencs</h2>
-                <p>Dencs is a Decentralized Elastic Network of Currency Services for payment system and remittance network by Dencs.org.</p>
-                
-                <p>Dencs aims to enable safe, instant and low-cost global financial transactions and supports any credit system or other unit of value (internet bandwidth usage, mobile roaming data, utility usage tracking, etc.).</p>
-
-                <p>It is built upon a distributed, open-source protoc-ol for currency services.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Download Section -->
-    <section id="download" class="text-center">
+
+    <section id="download" class="content-section" ng-controller="headerCtrl">
         <div class="download-section">
             <div class="container">
-                <div class="col-lg-6">
-                    <div class="feature-section">
-                        <div class="feature-img">
-                            <img src="img/Issue_your_own_currency.png" height="250" width="250" />
-                        </div>
-                        <h3>Issue your own currency</h3>
-                        <p>Your payment infrastructure belongs to you</p>
-                    </div>
+                <h4>Learn</h4>
+                <hr class="hr-fat">
+                <div>
+                    <ul class="nav navbar-left col-lg-3 nav-left-section">
+                        <li><a href="" ng-click="gotoAnchor(1)">Introduction</a></li>
+                        <li><a href="" ng-click="gotoAnchor(2)">Blockchain technology</a></li>
+                        <li><a href="" ng-click="gotoAnchor(3)">Consensus</a></li>
+                        <li><a href="" ng-click="gotoAnchor(4)">Alliance</a></li>
+                        <li><a href="" ng-click="gotoAnchor(5)">Issuer</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-6">
-                    <div class="feature-section">
-                        <div class="feature-img">
-                            <img src="img/Secure_transaction.png" height="250" width="250" />
-                        </div>
-                        <h3>Secure transaction confirmed in seconds</h3>
-                        <p>Powered by improved <a href="https://bitcoin.org/en/">bitcoin</a> technology providing reliable transactions</p>
+                <div class="col-lg-7 learn-content-section">
+                    <div id="anchor1">
+                        <h3>Introduction</h3>
+                        <p>Dencs <span style="text-decoration: line-through;">(pronounced like "Thanks")</span> is a Decentralized Elastic Network of Currency Services for payment system and remittance network by DENCS.org. Dencs aims to enable safe, instant and low-cost global financial transactions and supports any credit system or other unit of value (internet bandwidth usage, mobile roaming data, utility usage tracking, etc.).</p>
+                        <p>It is built upon a distributed, open-source protocol for currency services. At the core of Dencs, it is based around a shared, public, sequential transaction database, improved from Bitcoin blockchain. Let’s call it ledger.</p>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="feature-section">
-                        <div class="feature-img">
-                            <img src="img/Open_Infrastructure.png" height="250" width="250" />
-                        </div>
-                        <h3>Open Infrastructure for developers</h3>
-                        <p>For developers, we provide API and documentation to build your application</p>
+                    
+                    <hr class="hr-fat">
+
+                    <div id="anchor2">
+                        <h3>Blockchain technology</h3>
+                        <p>The blockchain is simply a digital ledger. A ledger is the principal book or computer file for recording and totaling economic transactions measured in terms of a monetary unit of account by account type, with debits and credits in separate columns and a beginning monetary balance and ending monetary balance for each account.</p>
+                        <p>The blockchain holds information about balances and transaction history of currencies and assets in all accounts. Participants in Dencs agree to the transactions added into the ledger via a mechanism of consensus algorithm which is reached in seconds.</p>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="feature-section">
-                        <div class="feature-img">
-                            <img src="img/Integrated_ecosystem.png" height="250" width="350" />
-                        </div>
-                        <h3>Integrated ecosystem for operation</h3>
-                        <p>Built-in <a href="https://bitcoin.org/en/">bitcoin</a> ecosystem and business operation support system</p>
+
+                    <hr class="hr-fat">
+                    
+                    <div id="anchor3">
+                        <h3>Consensus algorithm</h3>
+                        <p>The fundamental consensus algorithm is elastic and secure, and ensures the trust between each participant. This mechanism utilized the amazing concept of proof of work, as a voting process to select a verifier once in a period. This verifier will check whether the transactions in that period are valid or not. All this allows for payments without the need for a centralized clearing house.</p>
+                    </div
+
+                    <hr class="hr-fat">
+                    
+                    <div id="anchor4">
+                        <h3>Alliance</h3>
+                        <p>Dencs adopts a multi-alliance structure for verifying transactions in the network. Each alliance may comprise a group of Dencs users, which together compete with other alliances in terms of hashing power, for the right to validate the ledger and earn its transaction fee.</p>
+                        <p>On the other hands, alliances coordinate with each other through a voting system, to accept a new member to form its alliance, or to dissolve misbehaved ones. This competition and cooperation among alliances co-exist to secure the entire Dencs network.</p>
+                    </div>
+
+                    <hr class="hr-fat">
+
+                    <div id="anchor5">
+                    <h3>Issuer</h3>
+                    <p>Dencs supports transactions in multiple currencies. Each currency was minted by an issuer, and the value of the currency is backed by the credibility of its own issuer. Through the authorization of alliances, an issuer can provide multiple currencies, and make policies for the exchange between the digital tokens and the underlying assets.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+    <section id="contact" class="container content-section text-center contact-section">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact us</h2>
@@ -166,9 +150,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Map Section -->
-    <!-- <div id="map"></div> -->
 
     <!-- Footer -->
     <footer>
